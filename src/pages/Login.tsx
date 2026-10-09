@@ -20,10 +20,10 @@ function Login() {
       const accessToken = resData.access_token
       const refreshToken = resData.refresh_token
       if (accessToken && refreshToken) {
-        localStorage.setItem("ACCCESS_TOKEN", accessToken)
+        localStorage.setItem("ACCESS_TOKEN", accessToken)
         localStorage.setItem("REFRESH_TOKEN", refreshToken)
 
-        navigate("/")
+        window.location.href = "/"
       }
     } catch (err) {
       console.error(err)
